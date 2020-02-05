@@ -233,10 +233,14 @@ class MainActivity : AppCompatActivity() {
             else if (i == '1') {
                 coeff_x1_1 -= coeff_x2_1
                 if (coeff_x1_1 == 0.0) {
-                    if (count == 1)
-                        reduced_str += "x^1 "
-                    else
-                        reduced_str += "x^1 "
+                    if (checkPos.contains("2")) {
+                    }
+                    else {
+                        degree = 0
+                        degree_tv.text = "степень уравнения = $degree"
+                    }
+                    reduced_str += ""
+                    checkPos.replace("1", "")
                 }
                 else {
                     if ((coeff_x1_1 - coeff_x1_1.toInt()) == 0.0)
@@ -257,13 +261,13 @@ class MainActivity : AppCompatActivity() {
                 }
                 intDigit = 0
             }
-            else {
+            else if (i == '2'){
                 coeff_x1_2 -= coeff_x2_2
                 if (coeff_x1_2 == 0.0) {
-                    if (count == 1)
-                        reduced_str += "x^2 "
-                    else
-                        reduced_str += "x^2 "
+                    degree = 1
+                    degree_tv.text = "степень уравнения = $degree"
+                    reduced_str += ""
+                    checkPos.replace("2", "")
                 }
                 else {
                     if ((coeff_x1_2 - coeff_x1_2.toInt()) == 0.0)
