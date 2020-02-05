@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">ComputorV1</string>
+    <string name="text_button">solve</string>
+    <string name="equation">equation</string>
+</resources>
